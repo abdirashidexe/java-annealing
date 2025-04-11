@@ -38,6 +38,20 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
+    int count = 0;
+
+    for (String word : words)
+    {
+      if (word == "")
+      {
+        count++;
+      }
+    }
+
+    if (count > 0)
+    {
+      return true;
+    }
     return false;
   }
 
