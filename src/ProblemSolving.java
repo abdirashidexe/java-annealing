@@ -63,8 +63,23 @@ public class ProblemSolving {
    * @param words a set of words
    * @return the maximum length of a word in the set
    */
-  public static int maxLength(Set<String> words) {
-    return 0;
+  public static int maxLength(Set<String> words) { // [hi, hello, dot] // 2, 5, 3
+    int max = 0;
+
+    for (String word : words)
+    {
+      if (word.length() > max)
+      {
+        max = word.length();
+      }
+    }
+
+    if (words.size() == 0)
+    {
+      return 0;
+    }
+
+    return max;
   }
 
  /**
@@ -76,6 +91,8 @@ public class ProblemSolving {
    * @return the minimum length of a word in the set
    */
   public static int minLength(Set<String> words) {
+    int min = 0;
+    
     return Integer.MAX_VALUE;
   }
 }
