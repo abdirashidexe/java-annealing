@@ -99,7 +99,7 @@ public class ProblemSolving {
     }
 
     // min is now the last items length, we can compare it to each words length now
-
+    
     for (String word2 : words)
     { 
       if (word2.length() < min)
