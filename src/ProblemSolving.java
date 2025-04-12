@@ -92,7 +92,27 @@ public class ProblemSolving {
    */
   public static int minLength(Set<String> words) {
     int min = 0;
-    
-    return Integer.MAX_VALUE;
+
+    for (String word : words)
+    {
+      min = word.length();
+    }
+
+    // min is now the last items length, we can compare it to each words length now
+
+    for (String word2 : words)
+    { 
+      if (word2.length() < min)
+      {
+        min = word2.length();
+      }
+    }
+
+    if (words.size() == 0)
+    {
+      return Integer.MAX_VALUE;
+    }
+
+    return min;
   }
 }
